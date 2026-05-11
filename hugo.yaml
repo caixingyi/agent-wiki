@@ -33,11 +33,11 @@ menu:
     - name: 项目
       pageRef: /projects
       weight: 3
-    - name: 社区
-      pageRef: /community
-      weight: 4
     - name: 他山之石
       pageRef: /learning-paths
+      weight: 4
+    - name: 社区
+      pageRef: /community
       weight: 5
     - name: 贡献者
       pageRef: /contributors
