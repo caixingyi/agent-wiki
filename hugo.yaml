@@ -66,6 +66,21 @@ params:
     displayCopyright: true
     displayPoweredBy: false
 
+  comments:
+    enable: true
+    type: giscus
+    giscus:
+      repo: caixingyi/agent-wiki
+      repoId: R_kgDOSZ8FKg
+      category: Announcements
+      categoryId: DIC_kwDOSZ8FKs4C8w-L
+      mapping: pathname
+      strict: 1
+      reactionsEnabled: 1
+      emitMetadata: 0
+      inputPosition: bottom
+      lang: zh-CN
+
   editURL:
     enable: true
     base: "https://github.com/caixingyi/agent-wiki/edit/main/content"
