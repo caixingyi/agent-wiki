@@ -1,0 +1,33 @@
+/* === Agent Wiki 配色 === */
+
+/* 导航栏天蓝色 */
+.hextra-nav-container-blur {
+  background-color: #0ea5e9 !important;
+  box-shadow: none !important;
+}
+.hextra-nav-container a,
+.hextra-nav-container button {
+  color: rgba(255,255,255,0.85) !important;
+}
+.hextra-nav-container a:hover {
+  color: #fff !important;
+}
+.hextra-nav-container .hextra-navbar-title {
+  color: #fff !important;
+}
+/* 搜索框白色文字 + 半透明背景 */
+.hextra-nav-container input,
+.hextra-nav-container [data-search],
+.hextra-nav-container .hx-text-gray-500 {
+  color: rgba(255,255,255,0.9) !important;
+  background-color: rgba(255,255,255,0.15) !important;
+  border-color: rgba(255,255,255,0.25) !important;
+}
+.hextra-nav-container input::placeholder {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+/* 代码块圆角 */
+pre {
+  border-radius: 6px !important;
+}

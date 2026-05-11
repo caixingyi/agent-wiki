@@ -1,0 +1,68 @@
+baseURL: "https://caixingyi.github.io/agent-wiki/"
+title: "Agent Wiki"
+defaultContentLanguage: zh-cn
+
+enableRobotsTXT: true
+enableGitInfo: false
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+menu:
+  main:
+    - name: 资源
+      pageRef: /resources
+      weight: 1
+    - name: 面经
+      pageRef: /interview
+      weight: 2
+    - name: 项目
+      pageRef: /projects
+      weight: 3
+    - name: 社区
+      pageRef: /community
+      weight: 4
+    - name: 贡献者
+      pageRef: /contributors
+      weight: 5
+    - name: 搜索
+      weight: 6
+      params:
+        type: search
+    - name: GitHub
+      weight: 7
+      url: "https://github.com/caixingyi/agent-wiki"
+      params:
+        icon: github
+
+params:
+  description: "AI Agent 开发资源、面试题库与开发者社区"
+
+  navbar:
+    displayTitle: true
+    displayLogo: false
+
+  page:
+    width: wide
+
+  footer:
+    displayCopyright: true
+    displayPoweredBy: false
+
+  editURL:
+    enable: true
+    base: "https://github.com/caixingyi/agent-wiki/edit/main/content"
