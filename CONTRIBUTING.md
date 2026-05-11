@@ -61,6 +61,7 @@ sidebar:
 | `content/interview/` | 面经：面试真题、系统设计题 |
 | `content/projects/` | 项目实战：实战教程、开源项目 |
 | `content/community/` | 社区：周报、活动、讨论 |
+| `content/learning-paths/` | 他山之石：个人学习路线、踩坑经验、转型故事 |
 
 ## 注意事项
 
