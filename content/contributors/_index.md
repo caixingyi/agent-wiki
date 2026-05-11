@@ -9,8 +9,7 @@ sidebar:
 
 ## 核心维护者
 
-<!-- CONTRIBUTORS-START -->
-<!-- CONTRIBUTORS-END -->
+[![Contributors](https://contrib.rocks/image?repo=caixingyi/agent-wiki)](https://github.com/caixingyi/agent-wiki/graphs/contributors)
  
 ## 如何成为贡献者
 
