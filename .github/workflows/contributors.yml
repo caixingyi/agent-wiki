@@ -1,0 +1,42 @@
+name: Update Contributors
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate contributors list
+        run: |
+          # 通过 GitHub API 获取贡献者列表
+          CONTRIBUTORS=$(curl -s "https://api.github.com/repos/${{ github.repository }}/contributors" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}")
+
+          # 生成 HTML 头像列表
+          HTML=""
+          for row in $(echo "$CONTRIBUTORS" | jq -r '.[] | @base64'); do
+            _jq() { echo "$row" | base64 --decode | jq -r "$1"; }
+            LOGIN=$(_jq '.login')
+            AVATAR=$(_jq '.avatar_url')
+            URL=$(_jq '.html_url')
+            HTML="$HTML<a href=\"$URL\"><img src=\"$AVATAR\" width=\"80\" style=\"border-radius:50%;margin:4px\" alt=\"$LOGIN\" /></a>\n"
+          done
+
+          # 替换占位符之间的内容
+          FILE="content/contributors/_index.md"
+          sed -i "/<!-- CONTRIBUTORS-START -->/,/<!-- CONTRIBUTORS-END -->/c\\<!-- CONTRIBUTORS-START -->\n${HTML}<!-- CONTRIBUTORS-END -->" "$FILE"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/contributors/_index.md
+          git diff --cached --quiet || (git commit -m "docs: auto-update contributors" && git push)

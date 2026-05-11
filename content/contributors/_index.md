@@ -9,10 +9,9 @@ sidebar:
 
 ## 核心维护者
 
-| 贡献者 | GitHub | 职责 |
-|--------|--------|------|
-| caixingyi | [@caixingyi](https://github.com/caixingyi) | 项目发起人、内容维护 |
-
+<!-- CONTRIBUTORS-START -->
+<!-- CONTRIBUTORS-END -->
+ 
 ## 如何成为贡献者
 
 我们欢迎任何形式的贡献：
