@@ -1,4 +1,9 @@
-# 📚 科研文献调研智能体 (Scholar Research Agent) 
+---
+title: "📚 科研文献调研智能体 (Scholar Research Agent) "
+type: docs
+sidebar:
+  open: false
+---
 
 ## 1. 项目简介
 
