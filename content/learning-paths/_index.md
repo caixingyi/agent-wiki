@@ -1,7 +1,7 @@
 ---
 title: 他山之石
 type: docs
-weight: 5
+weight: 4
 sidebar:
   open: false
 ---

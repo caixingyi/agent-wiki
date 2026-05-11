@@ -1,7 +1,7 @@
 ---
 title: 社区
 type: docs
-weight: 4
+weight: 5
 sidebar:
   open: false
 ---
