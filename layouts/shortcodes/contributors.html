@@ -1,0 +1,16 @@
+{{- $contributors := hugo.Data.contributors -}}
+{{- if $contributors -}}
+  <div class="contributors-grid">
+    {{- range $contributors }}
+      <a class="contributor-card" href="{{ .html_url }}" target="_blank" rel="noopener">
+        <img class="contributor-avatar" src="{{ .avatar_url }}" alt="{{ .login }} avatar" loading="lazy" width="56" height="56" />
+        <span class="contributor-meta">
+          <span class="contributor-name">{{ .login }}</span>
+          <span class="contributor-count">{{ .contributions }} 次提交</span>
+        </span>
+      </a>
+    {{- end }}
+  </div>
+{{- else -}}
+  <p class="contributors-empty">贡献者数据会在 GitHub Pages 部署时自动从 GitHub 更新。</p>
+{{- end -}}

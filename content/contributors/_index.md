@@ -9,9 +9,9 @@ sidebar:
 
 ## 项目贡献者
 
-[![Contributors](https://contrib.rocks/image?repo=caixingyi/agent-wiki)](https://github.com/caixingyi/agent-wiki/graphs/contributors)
+{{< contributors >}}
 
-仓库贡献者会自动展示在本页面中，数据来源于 GitHub 仓库贡献记录。
+仓库贡献者会在每次部署时自动展示在本页面中，数据来源于 GitHub 仓库贡献记录。
 
 ## 如何成为贡献者
 

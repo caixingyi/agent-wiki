@@ -23,7 +23,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.147.4
+      HUGO_VERSION: 0.161.1
     steps:
       - name: Install Hugo CLI
         run: |
@@ -46,6 +46,15 @@ jobs:
 
       - name: Hugo Module Get
         run: hugo mod get -u
+
+      - name: Generate contributors data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p data
+          gh api --paginate "/repos/${GITHUB_REPOSITORY}/contributors?per_page=100" \
+            --jq '.[] | {login, avatar_url, html_url, contributions, type}' \
+            | jq -s '.' > data/contributors.json
 
       - name: Build with Hugo
         env:
