@@ -1,5 +1,5 @@
 ---
-title: "AI infra/机器学习系统工程师（C++）实习"
+title: "千寻智能 AI infra/机器学习系统工程师（C++）实习"
 type: docs
 sidebar:
   open: false
