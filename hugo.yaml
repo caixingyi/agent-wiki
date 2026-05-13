@@ -36,24 +36,21 @@ menu:
     - name: 他山之石
       pageRef: /learning-paths
       weight: 4
-    - name: 社区
-      pageRef: /community
-      weight: 5
     - name: 贡献者
       pageRef: /contributors
-      weight: 6
+      weight: 5
     - name: 搜索
-      weight: 7
+      weight: 6
       params:
         type: search
     - name: GitHub
-      weight: 8
+      weight: 7
       url: "https://github.com/caixingyi/agent-wiki"
       params:
         icon: github
 
 params:
-  description: "AI Agent 开发资源、面试题库与开发者社区"
+  description: "AI Agent 开发资源、面试题库与项目实战指南"
 
   navbar:
     displayTitle: true
